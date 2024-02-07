@@ -48,7 +48,7 @@ export default {
 
         padding: 1rem 0;
 
-        border: 1px dashed black;
+        // border: 1px dashed black;
     }
     
 </style>

@@ -1,5 +1,7 @@
 // mixins
 
+@use './variables' as *;
+
 @mixin d-flex {
     display: flex;
 }
@@ -31,4 +33,15 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+@mixin btn {
+    padding: 0.8rem;
+    text-transform: uppercase;
+}
+
+@mixin btn-transparent-blue {
+    border: 2px solid $blue_DC;
+    background-color: transparent;
+    color: white;
 }

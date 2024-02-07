@@ -200,7 +200,7 @@ export default {
 
     nav {
         @include d-flex;
-        gap: 10px;
+        gap: 20px;
 
         .column {
 

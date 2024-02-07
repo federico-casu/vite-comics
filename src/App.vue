@@ -14,13 +14,15 @@
   import HeaderComp from './components/HeaderComp.vue';
   import ContentComp from './components/02-main/ContentComp.vue';
   import FooterComp from './components/FooterComp.vue';
+  import CTAComp from './components/CTAComp.vue';
 
 
   export default {
     components: {
       HeaderComp,
       ContentComp,
-      FooterComp
+      FooterComp,
+      CTAComp
     }
   }
 </script>
@@ -41,6 +43,10 @@
     <FooterComp/>
   </footer>
 
+  <div id="cta">
+    <CTAComp/>
+  </div>
+
 </template>
 
 <style lang="scss">
@@ -49,9 +55,7 @@
 @use './assets/styles/partials/mixins' as *;
 @use './assets/styles/partials/variables' as *;
 
-header {
-  border: 1px solid red;
-}
+
 
 main {
   .content {
@@ -64,6 +68,11 @@ footer {
   background-image: url('./assets/img/footer-bg.jpg');
   @include bg-image-top-cover;
   height: 280px;
+}
+
+#cta {
+  background-color: $dark-grey_DC;
+  height: 15vh;
 }
 
 </style>
