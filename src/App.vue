@@ -14,7 +14,7 @@
   import HeaderComp from './components/HeaderComp.vue';
   import ContentComp from './components/02-main/ContentComp.vue';
   import FooterComp from './components/FooterComp.vue';
-  import CTAComp from './components/CTAComp.vue';
+  import CTAComp from './components/04-cta/CTAComp.vue';
 
 
   export default {

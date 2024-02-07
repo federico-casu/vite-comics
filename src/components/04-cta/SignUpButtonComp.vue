@@ -29,16 +29,12 @@ export default {
 <style lang="scss" scoped>
     /* stile del componente */
 
-    @use '../assets/styles/partials/mixins' as *;
-    @use '../assets/styles/partials/variables' as *;
+    @use '../../assets/styles/partials/mixins' as *;
+    @use '../../assets/styles/partials/variables' as *;
 
     button {
         @include btn;
-        @include btn-transparent-blue;
-
-        margin-top: 10px;
-
-        
+        @include btn-transparent-blue;        
     }
     
 </style>
