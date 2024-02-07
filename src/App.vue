@@ -12,10 +12,13 @@
 
 <script>
   import LogoComp from './components/01-header/LogoComp.vue';
+  import NavComp from './components/01-header/NavComp.vue';
+
 
   export default {
     components: {
-      LogoComp
+      LogoComp,
+      NavComp
     }
   }
 </script>
@@ -25,6 +28,7 @@
   <header>
     <div class="container">
       <LogoComp/>
+      <NavComp/>
     </div>
   </header>
 
@@ -50,6 +54,8 @@ header {
     align-items: center;
 
     padding: 1rem 0;
+
+    border: 1px dashed black;
   }
 
   border: 1px solid red;
