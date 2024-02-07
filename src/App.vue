@@ -15,6 +15,7 @@
   import ContentComp from './components/02-main/ContentComp.vue';
   import FooterComp from './components/FooterComp.vue';
   import CTAComp from './components/04-cta/CTAComp.vue';
+  import CategoriesComp from './components/02-main/categories/CategoriesComp.vue';
 
 
   export default {
@@ -22,7 +23,8 @@
       HeaderComp,
       ContentComp,
       FooterComp,
-      CTAComp
+      CTAComp,
+      CategoriesComp
     }
   }
 </script>
@@ -36,6 +38,10 @@
   <main>
     <section class="content">
       <ContentComp/>
+    </section>
+
+    <section class="categories">
+      <CategoriesComp/>
     </section>
   </main>
 
@@ -61,6 +67,11 @@ main {
   .content {
     background-color: $black_DC;
     height: 15vh;
+  }
+
+  .categories {
+    background-color: $blue_DC;
+    // height: 15vh;
   }
 }
 
