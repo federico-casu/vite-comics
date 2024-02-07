@@ -11,14 +11,14 @@
 -->
 
 <script>
-  import LogoComp from './components/01-header/LogoComp.vue';
-  import NavComp from './components/01-header/NavComp.vue';
+  import HeaderComp from './components/HeaderComp.vue';
+  import ContentComp from './components/02-main/ContentComp.vue';
 
 
   export default {
     components: {
-      LogoComp,
-      NavComp
+      HeaderComp,
+      ContentComp
     }
   }
 </script>
@@ -26,14 +26,11 @@
 <template>
   
   <header>
-    <div class="container">
-      <LogoComp/>
-      <NavComp/>
-    </div>
+    <HeaderComp/>
   </header>
 
   <main>
-
+    <ContentComp/>
   </main>
 
   <footer>
@@ -46,19 +43,16 @@
 
 @use './assets/styles/general.scss' as *;
 @use './assets/styles/partials/mixins' as *;
+@use './assets/styles/partials/variables' as *;
 
 header {
-  .container {
-    @include d-flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 1rem 0;
-
-    border: 1px dashed black;
-  }
-
   border: 1px solid red;
+}
+
+main {
+  background-color: $black_DC;
+
+  height: 15vh;
 }
 
 </style>
