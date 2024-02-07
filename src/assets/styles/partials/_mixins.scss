@@ -20,3 +20,15 @@
     @include flex-center;
     align-items: center;
 }
+
+@mixin bg-image-top-cover {
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@mixin bg-image-center-cover {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

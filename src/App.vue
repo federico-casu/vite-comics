@@ -13,12 +13,14 @@
 <script>
   import HeaderComp from './components/HeaderComp.vue';
   import ContentComp from './components/02-main/ContentComp.vue';
+  import FooterComp from './components/FooterComp.vue';
 
 
   export default {
     components: {
       HeaderComp,
-      ContentComp
+      ContentComp,
+      FooterComp
     }
   }
 </script>
@@ -30,11 +32,13 @@
   </header>
 
   <main>
-    <ContentComp/>
+    <section class="content">
+      <ContentComp/>
+    </section>
   </main>
 
   <footer>
-
+    <FooterComp/>
   </footer>
 
 </template>
@@ -50,9 +54,16 @@ header {
 }
 
 main {
-  background-color: $black_DC;
+  .content {
+    background-color: $black_DC;
+    height: 15vh;
+  }
+}
 
-  height: 15vh;
+footer {
+  background-image: url('./assets/img/footer-bg.jpg');
+  @include bg-image-top-cover;
+  height: 280px;
 }
 
 </style>
