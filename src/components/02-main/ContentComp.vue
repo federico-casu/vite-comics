@@ -6,6 +6,7 @@
 // Js componente
 
 import JumbotronComp from './JumbotronComp.vue';
+import ComicComp from './ComicComp.vue';
 
 
 export default {
@@ -93,7 +94,8 @@ export default {
         
     },
     components: {
-        JumbotronComp
+        JumbotronComp,
+        ComicComp
     }
 }
 </script>
@@ -103,8 +105,17 @@ export default {
     <!-- html componente -->
     <JumbotronComp/>
     <div class="container">
-        <!-- <h1>{{ message }}</h1> -->
+
+        <span>current series</span>
+        
+        <ComicComp
+        v-for="(comic, index) in comics" :key="index"
+        :thumb="comic.thumb"
+        :series="comic.series" />
+
+        <span>load more</span>
     </div>
+
     
     
 </template>
@@ -114,14 +125,39 @@ export default {
     /* stile del componente */
     @use '../../assets/styles/partials/variables' as *;
     @use '../../assets/styles/partials/mixins' as *;
+    // @use '../../assets/styles/general' as *;
 
     .container {
         color: white;
-        height: 100%;
+        // height: 100%;
+        padding: 3rem 0;
 
         @include d-flex;
+        flex-wrap: wrap;
         align-items: center;
+        gap: 20px;
+
+        position: relative;
+
+        span {
+            background-color: $blue_DC;
+            padding: 0.8rem 1rem;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        span:first-child {
+            position: absolute;
+            top: -22.05px;
+            left: -10px;
+        }
+
+        span:last-child {
+            margin: 0 auto;
+        }
     }
+
+    
 
     
 </style>

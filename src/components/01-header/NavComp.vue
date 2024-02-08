@@ -16,7 +16,7 @@ export default {
                 {
                     name: 'comics',
                     link: '#',
-                    selected: true
+                    selected: false
                 },
                 {
                     name: 'movies',
