@@ -7,7 +7,7 @@
 
 import FooterNavComp from './03-footer/FooterNavComp.vue';
 import FooterLogoComp from './03-footer/FooterLogoComp.vue';
-
+ 
 export default {
     name: 'FooterComp',
     data() {

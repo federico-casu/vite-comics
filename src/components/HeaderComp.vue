@@ -46,7 +46,9 @@ export default {
         justify-content: space-between;
         align-items: center;
 
-        padding: 1rem 0;
+        // padding: 1rem 0;
+
+        height: 12vh;
 
         // border: 1px dashed black;
     }

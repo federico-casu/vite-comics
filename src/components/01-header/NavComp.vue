@@ -16,7 +16,7 @@ export default {
                 {
                     name: 'comics',
                     link: '#',
-                    selected: false
+                    selected: true
                 },
                 {
                     name: 'movies',
@@ -62,7 +62,14 @@ export default {
         }
     },
     methods: {
-        
+        change(index) {
+            this.navLinks.forEach(element => {
+                if (element.selected) {
+                    element.selected = false;
+                }
+                this.navLinks[index].selected = true;
+            });
+        }
     }
 }
 </script>
@@ -73,7 +80,9 @@ export default {
     <nav>
         <ul>
             <li 
-            v-for="(element, index) in navLinks">
+            v-for="(element, index) in navLinks"
+            :class="element.selected ? 'active' : ''"
+            @click="change(index)">
                 <a :href="element.link">{{ element.name }}</a>
             </li>
         </ul>
@@ -89,18 +98,40 @@ export default {
 
     /* stile del componente */
     nav {
+        height: 100%;
+
         ul {
             @include d-flex;
+            // align-items: center;
             gap: 1rem;
+            height: 100%;
+            
             li {
+                @include d-flex;
+                align-items: center;
+
                 list-style-type: none;
                 text-transform: uppercase;
-                
+                height: 100%;
+                border-bottom: 3px solid transparent;
+
                 a {
                     text-decoration: none;
                     color: $black_DC;
+
+                    &:hover {
+                        color: $blue_DC;
+                    }
                 }
             }
+        }
+    }
+
+    .active {
+        border-bottom: 3px solid $blue_DC;
+
+        a {
+            color: $blue_DC;
         }
     }
     

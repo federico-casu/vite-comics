@@ -1,9 +1,11 @@
 
 
+
+
 <script>
 // Js componente
 export default {
-    name: 'LogoComp',
+    name: 'JumbotronComp',
     data() {
         return {
             
@@ -18,9 +20,8 @@ export default {
 
 <template>
     <!-- html componente -->
-
     <figure>
-        <img src="../../assets/img/dc-logo.png" alt="">
+        <img src="../../assets/img/jumbotron.jpg" alt="">
     </figure>
     
 </template>
@@ -30,11 +31,13 @@ export default {
     /* stile del componente */
 
     figure {
-        height: 100%;
-        padding: 0.5rem;
+        max-height: 40vh;
 
         img {
-            height: 100%;
+            max-height: 40vh;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
         }
     }
     

@@ -8,6 +8,16 @@
   Bonus:
   Creare un componente aggiuntivo per gestire la fascia azzurra con le icone.
 
+  ------------------------------------------------------------------------------------------------------------------------------
+
+  Descrizione:
+  Continuate a lavorare nella stessa repo di ieri e create un nuovo componente che rappresenterà le card dei fumetti.
+  Utilizzate i dati presenti nel file json che trovate in allegato e passateli al componente Card tramite props.
+
+  Una volta inseriti tutti i contenuti dinamicamente, completate il vostro layout e rifinite i dettagli con Sass.
+
+  Attenzione: Usare i dati degli oggetti presenti nello zip chiamato: "dc-comics.zip" e non quelli presenti nell'altra cartela chiamata "vue-dc-comics-2.zip"
+
 -->
 
 <script>
@@ -62,11 +72,10 @@
 @use './assets/styles/partials/variables' as *;
 
 
-
 main {
   .content {
     background-color: $black_DC;
-    height: 15vh;
+    // height: 15vh;
   }
 
   .categories {

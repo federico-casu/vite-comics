@@ -43,25 +43,9 @@ export default {
     <!-- html componente -->
     <div class="container">
         <ul>
-            <li>
-                <img src="../../../assets/img/buy-comics-digital-comics.png" alt="">
-                <span>digital comics</span>
-            </li>
-            <li>
-                <img src="../../../assets/img/buy-comics-merchandise.png" alt="">
-                <span>dc merchandise</span>
-            </li>
-            <li>
-                <img src="../../../assets/img/buy-comics-subscriptions.png" alt="">
-                <span>subscription</span>
-            </li>
-            <li>
-                <img src="../../../assets/img/buy-comics-shop-locator.png" alt="">
-                <span>comic shop locator</span>
-            </li>
-            <li>
-                <img src="../../../assets/img/buy-dc-power-visa.svg" alt="">
-                <span>dc power visa</span>
+            <li v-for="(item, index) in categories" :key="index">
+                <img :src="`../../../src/assets/img/${item.image}`" alt="">
+                <span>{{ item.name }}</span>
             </li>
         </ul>
     </div>
@@ -83,14 +67,24 @@ export default {
         ul {
             @include d-flex;
             align-items: center;
+            width: 100%;
 
             li {
                 @include d-flex;
+                width: 100%;
+                height: 100%;
                 align-items: center;
+                
                 list-style-type: none;
+                color: white;
+                text-transform: uppercase;
 
                 img {
                     transform: scale(0.4);
+                }
+
+                span {
+                    font-size: 0.7rem;
                 }
             }
         }

@@ -8,7 +8,7 @@ export default {
     name: 'SocialsComp',
     data() {
         return {
-            socials: [ '../../assets/img/footer-facebook.png', '../../assets/img/footer-periscope.png', '../../assets/img/footer-pinterest.png', '../../assets/img/footer-twitter.png', '../../assets/img/footer-youtube.png' ]
+            socials: [ 'footer-facebook.png', 'footer-periscope.png', 'footer-pinterest.png', 'footer-twitter.png', 'footer-youtube.png' ]
         }
     },
     methods: {
@@ -23,11 +23,9 @@ export default {
     <div>
         <span>follow us</span>
         <ul>
-            <li><img src="../../assets/img/footer-facebook.png" alt=""></li>
-            <li><img src="../../assets/img/footer-periscope.png" alt=""></li>
-            <li><img src="../../assets/img/footer-pinterest.png" alt=""></li>
-            <li><img src="../../assets/img/footer-twitter.png" alt=""></li>
-            <li><img src="../../assets/img/footer-youtube.png" alt=""></li>
+            <li v-for="(social, index) in socials" :key="index">
+                <img :src="`../../src/assets/img/${social}`" :alt="social">
+            </li>
         </ul>
     </div>
     
