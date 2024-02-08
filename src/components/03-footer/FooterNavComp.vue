@@ -226,6 +226,10 @@ export default {
                         text-decoration: none;
                         color: $bg-socials_DC;
                         font-size: 0.9rem;
+
+                        &:hover {
+                            color: white;
+                        }
                     }
                 }
             }

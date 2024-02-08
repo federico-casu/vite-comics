@@ -38,6 +38,7 @@ export default {
     /* stile del componente */
 
     @use '../../assets/styles/partials/mixins' as *;
+    @use '../../assets/styles/partials/variables' as *;
 
     div {
         flex-basis: calc(100% / 6 - (100px / 6 ));
@@ -45,6 +46,13 @@ export default {
         @include d-flex;
         flex-direction: column;
         gap: 10px;
+        cursor: pointer;
+
+        &:hover {
+            > span {
+                color: $blue_DC;
+            }
+        }
 
         figure {
             img {

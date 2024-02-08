@@ -34,7 +34,9 @@ export default {
 
     button {
         @include btn;
-        @include btn-transparent-blue;        
+        @include btn-transparent-blue;   
+        
+        cursor: pointer;
     }
     
 </style>

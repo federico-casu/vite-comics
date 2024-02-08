@@ -42,12 +42,19 @@ export default {
 <template>
     <!-- html componente -->
     <div class="container">
-        <ul>
+        <!-- <ul>
             <li v-for="(item, index) in categories" :key="index">
                 <img :src="`../../../src/assets/img/${item.image}`" alt="">
                 <span>{{ item.name }}</span>
             </li>
-        </ul>
+        </ul> -->
+
+        <div v-for="(category, index) in categories" :key="index">
+            <figure>
+                <img :src="`../../../src/assets/img/${category.image}`" :alt="category.name">
+            </figure>
+            <span>{{ category.name }}</span>
+        </div>
     </div>
 
     
@@ -63,31 +70,69 @@ export default {
         @include d-flex;
         height: 100%;
         align-items: center;
+        color: white;
+        padding: 20px 0;
+        gap: 10px;
 
-        ul {
+        > div {
+            flex-basis: calc(100% / 5);
             @include d-flex;
             align-items: center;
-            width: 100%;
+            gap: 10px;
 
-            li {
-                @include d-flex;
-                width: 100%;
-                height: 100%;
-                align-items: center;
-                
-                list-style-type: none;
-                color: white;
+            figure {
+                flex-basis: 40%;
+            }
+
+            span {
                 text-transform: uppercase;
-
-                img {
-                    transform: scale(0.4);
-                }
-
-                span {
-                    font-size: 0.7rem;
-                }
+                font-size: 12px;
+                width: 100%;
             }
         }
+
+        > div:nth-child(4) {
+            gap: 0;
+            figure {
+                transform: scale(0.7);
+            }
+            span {
+                font-size: 11px;
+            }
+        }
+
+        > div:last-child {
+            figure {
+                width: 40%;
+            }
+        }
+
+
+
+        // ul {
+        //     @include d-flex;
+        //     align-items: center;
+        //     width: 100%;
+
+        //     li {
+        //         @include d-flex;
+        //         width: 100%;
+        //         height: 100%;
+        //         align-items: center;
+                
+        //         list-style-type: none;
+        //         color: white;
+        //         text-transform: uppercase;
+
+        //         img {
+        //             transform: scale(0.4);
+        //         }
+
+        //         span {
+        //             font-size: 0.7rem;
+        //         }
+        //     }
+        // }
     }
 
 </style>

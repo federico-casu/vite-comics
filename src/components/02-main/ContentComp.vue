@@ -154,6 +154,7 @@ export default {
 
         span:last-child {
             margin: 0 auto;
+            cursor: pointer;
         }
     }
 

@@ -55,6 +55,7 @@ export default {
 
             li {
                 list-style-type: none;
+                cursor: pointer;
             }
         }
     }
